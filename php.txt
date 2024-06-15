@@ -1,0 +1,25 @@
+<?php
+// register.php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Process registration form data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Example: Connect to database and insert user data (not shown here)
+    // Placeholder for database connection and insertion code
+    // Example:
+    // $conn = new mysqli($servername, $username, $password, $dbname);
+    // Perform SQL query to insert user data
+    // $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    // $result = $conn->query($sql);
+    
+    // For demonstration, just display received data
+    echo "Registration successful!<br>";
+    echo "Username: " . $username . "<br>";
+    echo "Password: " . $password . "<br>";
+} else {
+    // Redirect or handle invalid requests
+    echo "Invalid request!";
+}
+?>
